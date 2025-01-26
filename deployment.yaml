@@ -59,3 +59,27 @@ spec:
       targetPort: 8080
   selector:
     app: httpwaterius
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: httpwaterius
+  annotations:
+    kubernetes.io/tls-acme: "true"
+    cert-manager.io/cluster-issuer: letsencrypt-prod-dns
+spec:
+  tls:
+  - hosts:
+    - waterius.sipleg.ru
+    secretName: httpwaterius-tls
+  rules:
+  - host: waterius.sipleg.ru
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: httpwaterius
+            port:
+              number: 8080
