@@ -16,3 +16,4 @@ COPY --from=build /go/bin/httpwaterius /usr/bin/httpwaterius
 COPY --from=build --chown=1000:1000 /httpwaterius/template/index.html /opt/index.html
 USER httpwaterius
 ENTRYPOINT ["/usr/bin/httpwaterius"]
+
