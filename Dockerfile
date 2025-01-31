@@ -9,7 +9,7 @@ COPY cmd cmd
 COPY internal internal
 COPY template template
 RUN env CGO_ENABLED=0 go install -ldflags="-w -s -X main.version=${VERSION}" ./...
-FROM scratch
+FROM golang:1.13-alpine
 COPY --from=build /etc/passwd /etc/passwd
 COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=build /go/bin/httpwaterius /usr/bin/httpwaterius
