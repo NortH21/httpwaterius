@@ -82,7 +82,6 @@ func newDataHandler(devices []string) http.HandlerFunc {
 			return
 		}
 
-		log
 		if data.Key == "" {
 			msg := fmt.Sprintln("Missing required field: key")
 			http.Error(w, msg, http.StatusBadRequest)
