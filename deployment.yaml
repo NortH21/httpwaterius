@@ -39,7 +39,7 @@ spec:
           failureThreshold: 3
         env:
           - name: HTTPWATERIUS_SERVICE_DEVICES
-            value: "Зел ванная"
+            value: "Bathroom"
         resources:
           limits:
             cpu: "1"
