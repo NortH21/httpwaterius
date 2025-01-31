@@ -40,8 +40,6 @@ spec:
         env:
           - name: HTTPWATERIUS_SERVICE_DEVICES
             value: "Bathroom"
-          - name: debug
-            value: true
         resources:
           limits:
             cpu: "1"
