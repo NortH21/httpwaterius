@@ -20,7 +20,7 @@ spec:
         runAsGroup: 3000
       containers:
       - name: httpwaterius
-        image: north21/httpwaterius
+        image: north21/httpwaterius:latest
         ports:
         - containerPort: 8080
         livenessProbe:
