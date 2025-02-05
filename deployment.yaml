@@ -39,7 +39,7 @@ spec:
           failureThreshold: 3
         env:
           - name: HTTPWATERIUS_SERVICE_DEVICES
-            value: "Bathroom"
+            value: "51DCFCEA7459747E2FDE81F10D03A0C3"
           - name: HTTPWATERIUS_DEBUG
             value: "true"
         resources:
